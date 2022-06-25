@@ -278,4 +278,5 @@ Agora e se fizermos as seguintes perguntas...
     - Não!
 - O número é menor que 20?
     - Sim!
+
 Já sabemos que o número está entre 50 e 20, e assim repetimos esta ação até encontrar o número
