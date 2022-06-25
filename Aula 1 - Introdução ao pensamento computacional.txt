@@ -1,0 +1,281 @@
+# Aula 1: Introdução ao pensamento computacional
+
+### Objetivo Geral
+Ser capaz de entender o que significa pensar computacionalmente. Pensamento aplicável à qualquer área do conhecimento. Dessa forma, seremos capazes de resolver qualquer problema de uma maneria mais objetiva e eficiente
+
+
+## 1. Pensamento computacional
+
+### Objetivo Geral
+Apresentar os conceitos que caracterizam o pensamento computacional, permitindo que o Desenvolvedor entenda o que significa pensar computacionalmente.
+
+### Pensamento computacional?
+Processo de pensamento envolvido na expressão de soluções em passos computacionais ou algoritmos que podem ser implementados no computador.
+
+- O pensamento computacional é muito utilizado para **formulação e resolução de problemas**, onde **humanos** e **máquinas** devem ser capazes de resolver.
+
+### O pensamento computacional é baseado em 4 pilares:
+1. Decomposição
+2. Reconhecimento de padrões
+3. Abstração
+4. Design de algoritmos
+
+#### 1. Decomposição
+ - Por exemplo: Dividir um problema complexo em subproblemas mais simples, isto é conhecido como decomposição.
+
+#### 2. Reconhecimento de padrões
+ - Por exemplo: Identificar padrões ou tendências, bem como identificar similaridades e diferenças entre os problemas.
+
+#### 3. Abstração
+ - Por exemplo: Extrapolar o conceito do problema para uma forma generalista, como encontrar a área de um círculo (A = pi . r^2).
+
+#### 4. Design de algoritmos
+ - Por exemplo: Formulação e automatização do problema, definir passo a passo da solução dele.
+ 
+ 
+
+## 2. Habilidades complementares
+ 
+### Objetivo Geral
+Raciocínio lógico é uma forma de pensamento estruturado, que permite encontrar a conclusão ou determinar a resolução de um problema.
+
+### O raciocínio lógico pode ser divido em 3 categorias:
+1. Indução
+2. Dedução
+3. Abdução
+
+#### 1. Indução
+Através de experimentações, você chegar a um resultado a partir de elementos previamente presentes, ou seja, você é induzido a pensar naquilo 
+
+#### 2. Dedução
+A dedução consiste em se chegar a uma verdade particular e/ou específica a partir de outra mais geral ou abrangente.
+
+#### 3. Abdução
+Amplamente utilizado em processos investigativos, diagnósticos... Exemplo: "A grama está molhada" -> logo deve ter chovido
+
+### Aperfeiçoamento
+Os raciocínios lógicos devem ser aperfeiçoados a todo instante, e a partir de uma solução, determinar pontos de melhora e refinamento
+
+- Ato de aperfeiçoar
+    - Otimizar processos
+    - Simplificar linhas de códigos
+    - Funções bem definidas
+
+
+
+## 3. Pilar: Decomposição
+
+### Objetivo Geral
+É coompreender como executar cada etapa de um pensamento computacional. Dessa forma, iremos abordar cada pilar de forma individual
+
+- "If you can't solve a problem, then there is an easier problem that you can solve: find it!"
+- "Se você não consegue resolver um problema, então existe um problema mais fácil que você pode resolver: encontre ele!"
+
+O primeiro passo da resolução de problemas dentro do conceito de pensamento computacional:
+- Dado um problema complexo, devemos quebra-lo em problemas menores. Portanto, problemas mais fáceis e gerenciáveis.
+
+Para decompor um problema, devemos:
+1. Processo de quebrar e determinar partes menores e gerenciáveis
+2. Combinar os elementos recompondo o problema original
+3. Definir a ordem de execução de tarefas menores, se as tarefas serão executadas de forma sequêncial ou paralela
+
+
+## 4. Pilar: Padrão
+1. Modelo base
+2. Estrutura invariante
+3. Repetição
+
+- Um bom exemplo são as fotos das redes sociais: o algoritmo reconhece um padrão de fotos curtidas, compreende, salva no servidor de dados e nos fornece fotos semelhantes aquelas que curtimos
+
+### Por que determinar padrões?
+Generelizar, com objetivo de obter resolução para problemas diferentes
+
+### Como o computador reconhece padrões?
+Através do ser humano
+- Grau de similaridade
+- Grupos conhecidos x objeto desconhecido
+- Através da comparação
+
+### Como simular o comportamento de comparação?
+- Representação de atributos
+- Aprendizado: conceito associado ao objeto
+- Armazenamento de dados
+- Regras de decisão
+
+### Padrões são amplamente utilizados para:
+- Classificação de dados
+- Reconhecimento de imagem
+- Reconhecimento de fala
+- Análise de cenas
+- Classificação de documentos
+
+Através de: **machine learning, redes neurais, inteligência artificial, ciência de dados...**
+
+
+
+## 5. Pilar: Abstração
+Generalização/Abstração
+
+### Abstrair
+- Observar, um ou mais elementos, avaliando características e propriedades em separado
+
+### Abstração
+- Processo intelectual de isolamento de um objeto da realidade
+
+### Generalizar
+- Tornar-se geral, mais amplo, extensão
+
+Generalização, na lógica, é a operação intelectual que consiste em reunir numa classe geral, um conjunto de seres ou fenômenos similares.
+
+Um bom **exemplo** de problema com a utilização de abstração é o problema da **limpeza do terreno**, onde existem vários pontos que devemor ir para realizar a limpeza: galpão 1, garagem, quadra, árvore, quintal ... devemos tratar todos estes lugares como pontos que devemos percorrer a distância e assim calcular a rota otimizada para percorrer o menor caminho para limpar todos os pontos.
+
+
+
+## 6. Pilar: Algoritmo
+O algoritmo é um pseudocódigo codificado através do computador de acordo com a linguagem de programação escolhidado para resolução de problemas, com o intuito de ser mais rápido e eficiente, no entanto **não opera sozinho e precisa de instruções detalhadas**.
+
+- O computador recebe, manipula e armeza dados.
+
+O algoritmo é um processo de resolução de problemas "step by setp" utilizando instruções
+
+1. O que precisa ser feito? -> Feito através de instruções
+2. Qual a ordem de execução? -> Feito através de instruções
+
+***Obs.: O algoritmo deve ser entendido por humano e máquina***
+
+### Análise
+- Estudo e definição dos dados de entrada e saída
+
+### Algoritmo
+- Descreve o problema por meio de ferramentas narrativas, fluxograma ou pseudocódigo
+
+### Codificação
+- O algoritmo é codificado de acordo com a linguagem de programação escolhida
+
+#### Sequência de um algoritmo
+
+Sequência de passos com objetivo definido >>> Execução de tarefas específicas >>> Conjunto de operações que resultam
+em uma sucessão finita de ações
+
+### Como construir um algoritmo?
+- ***1. Compreenção do problema***
+    - Definição dos pontos mais importantes <br><br>
+    
+- ***2. Definição dados de entrada***
+    - Dados fornecidos e cenário <br><br>
+    
+- ***3. Definir processamento***
+    - Cálculos e restrições <br><br>
+    
+- ***4. Definir dados de saída***
+    - Definição dos resultados que deverão ser fornecidos após o processamento <br><br>
+    
+- ***5. Utilizar um método de construção***
+    - Escolher a linguagem de codificação <br><br>
+
+- ***6. Teste e diagnóstico***
+    - Validação e refinamento do código <br><br>
+
+### Podemos utilizar outras ferramentas para auxiliar na construção de um algoritmo
+1. **Narrativa** -> Utilização da linguagem natural
+2. **Fluxograma** -> Utilização de símbolos pré-definidos
+3. **Pseudocódigo** -> "Portugol"
+
+- Exemplo 1, multiplicação de 2 números:
+        - Passo 1: Recebe os valores
+        - Passo 2: Multiplica os valores
+        - Passo 3: Imprime o resultado
+
+- Exemplo 2, média de alunos:
+        - Passo 1: Recebe os valores
+        - Passo 2: Realiza a média
+        - Passo 3: Imprime o resultado
+        - Passo 4: Regra de aprovação
+        - Passo 5: Imprime o resultado
+
+## 7. Estudo de caso conceitual: perdido na floresta
+Como resolver o problema utilizando o pensamento computacional?
+
+- Identificar mecanismos
+- Recursos comuns
+- Detalhes mais importantes
+
+Vamos exemplificar:
+
+Imagine que você está perdido na floresta, o que você precisa fazer para se manter vivo? Vamos começar pontuando algumas coisas importantes para nossa sobrevivência.
+
+Para isso vamos aplicar algumas técnicas:
+1. Decomposição
+2. Reconhecimento de padrões
+3. Abstração
+
+Aplicanto a técnica nº1, **decomposição** da *sobrevivência*:
+
+- Sobrevivência
+    - Água
+        - Chuva
+        - Nascente
+            - Fogo
+    - Comida
+        - Coletar
+        - Caçar
+            - Fogo
+    - Abrigo
+        - Localização
+            - Mapa
+        - Proteção
+            - Fogo
+            - Lança
+        - Quente e seco
+            - Fogo
+
+Agora aplicando a técnica nº2 e nº3, **reconhecimento de padrões** e **abstração** respectivamente.
+***Perceba que fogo é um item de repetição, no entanto também podemos criar o mapa por abstração***
+
+Agora podemos fazer uma sequência lógica para preparação da comida, por exemplo:
+1. Pegar o peixe 
+2. Colocar água na panela 
+3. Fever a água 
+4. Limpar o peixe 
+5. Fazer o cozido 
+6. Assar o filé
+
+## 8. Estudo de caso aplicado: soma de um intervalo
+Vamos agora, realizar a soma de números entre 1 e 200
+
+- Por exemplo:
+    - 1+2
+    - 1+3
+    - 1+4
+    - 1+5 ...
+    - 1+200
+
+- Outra forma de expressar a mesma solução é, por exemplo:
+    - 200+1
+    - 199+2
+    - 198+3
+    - 197+4... 
+
+O resultado sempre será 201. Agora como expressar isto de forma generalista? <br>
+[x,y] = [1,200]
+
+Assim, temos:
+(y-1)+(x+1)=x+y
+    
+
+## 9. Estudo de caso aplicado: advinhe um número
+Agora, vamos realizar a seguinte dinâmica: O problema consiste em determinar o número escolhido por uma pessoa dentro de um intervalo. Perguntas com respostas de sim e não.
+
+O número é 1?
+O número é 2?
+O número é 3?
+
+Possível solução, no entanto ineficiente e leva a um desperdicio de tempo
+
+Agora e se fizermos as seguintes perguntas...
+
+- O número é maior que 50?
+    - Não!
+- O número é menor que 20?
+    - Sim!
+Já sabemos que o número está entre 50 e 20, e assim repetimos esta ação até encontrar o número

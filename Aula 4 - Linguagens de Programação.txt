@@ -1,0 +1,186 @@
+# Aula 4: Linguagens de Programação
+
+Será apresentado os paradigmas de programação existentes,incluindo o conceito em si. As linguagens de programação são baseadas em um ou mais paradigmas, sendo o último caso conhecido como linguagem multiparadigma
+
+## 1. Introdução a linguagem do programação
+#### Problemas computacionais
+Objeto de discussão que possui instruções passo a passo que são mais facilmente resolvíveis em ambiente computacinal.
+
+A programação pode ser utilizada para resolução de problemas de:
+- Decisão
+- Busca
+- Otimização
+
+### O que é uma linguagem de programação?
+Método padronizado composto por um conjunto de regras sintáticas e semânticas de implementação de um **código fonte**.
+
+#### Código fonte
+ - Conjunto de palavras com regras
+ - O código fonte pode ser separado em 2 pilares: 1. Tradução e 2. Interpretação
+
+
+## 2. Como um computador entende um programa?
+Um programa é só um amontado de palavras senão for possível que o computador entenda
+
+### Processo de tradução
+Linguagem de alto nível **>>>** Compilador (Executa análise do programa) **>>>** Assembly **>>>** Linguagem da máquina
+
+***Programa Fonte*** **>>>** Compilador (Executa análise do programa) **>>>** ***Programa Objeto*** **>>>** Linguagem da máquina
+
+### Tradução
+1. Geração do programa objeto
+2. Execução do programa objeto
+
+**Vantagens:** Execução mais rápida; programa menores
+
+### Interpretação
+Programa fonte executado diretamente
+
+**Vantagens:** Maior flexibilidade
+
+
+## 3. Características de um programa
+Basta sair programando?
+Existem boas práticas em programação? A resposta é **sim**, existem importantes características
+
+### Desenvolvimento de programas
+1. Legibilidade
+2. Redigibilidade
+3. Confiabilidade
+4. Custo
+
+### Legibilidade
+- Facilidade de leitura
+- Compreensão
+- Ortogonalidade
+- Definição adequada das estruturas
+***"Estado que é legível"***
+
+### Redigibilidade
+- Pode conflitar com a legibilidade
+- Ortogonalidade
+- Simplicidade da escrita
+- Suporte à abstração
+- Reuso do código
+- Expressividade
+***"Facilidade de escrita de código"***
+
+### Confiabilidade
+- Verificação de tipos
+- Trata exceções
+- Uso de ponteiros
+- Compatibilidade entre compiladore
+***"Faz o que foi programado para fazer"***
+
+### Custo
+- Treinamento
+- Codificação
+- Compilação
+- Execução
+- Infra-estrutura
+***"Análise de impacto"***
+
+### Outras características
+- Atualizações
+- Uso para IA
+- Disponibilidade de ferramentas
+- Comunidade ativa
+- Adoção pelo mercado
+
+
+## 4. Análises e código
+### Análise Léxica
+1. Particionar (elementos denominados **tokens**)
+2. Classificar (elementos denominados **identificadores, palabras reservadas, números, strings ..**)
+3. Eliminar (elementos denominados **caracteres de espaços em branco, comentários..**)
+
+### Análise Sintática
+Significado de 'Sintaxe'
+"Componente do sistema linguístico que interligam os constituintesda sentença, atribuindo-lhe uma estrutura"
+
+Padrão - gramática
+- Depende da linguagem de programação utilizada
+
+### Análise Semântica
+Significado de 'Semântica'
+"É o estudo do significado. Incide sobre a relação entre significantes, como: palavras, frases, sinais e símbolos"
+
+Erro de semântica:
+- não faz o que é esperado
+
+***Exemplo:***
+if (x = 0)
+printf("O valor e' nulo\n");
+
+***O correto seria:***
+if (x == 0)
+printf("O valor e' nulo\n");
+
+## 5. Paradigmas de programação
+O que é um paradigma?
+"Forma de resolução de problemas com diretrizes e limitações específicas de cada paradigma utilizando linguagem de programação."
+
+### Classificação
+1. Orientação à objeto
+2. Procedural (conhecido como chamadas sucessivas e procedimentos separados)
+3. Funcional (instruções são baseadas em funções)
+4. Estruturado (estrutura de blocos alinhados)
+5. Computação Distribuída (funções executadas de forma independente)
+6. Lógico
+
+### Paradigma Estruturado
+Conceitos:
+- Sequência
+- Decisão (teste lógico)
+- Iteração (funções, laços, condições..)
+
+Utilização:
+- Problemas simples e diretos
+- Aprender programação
+POO ainda não compreendida por muitos
+
+### Paradigma Orientado à Objeto (POO)
+Paradigma de programação baseado na utilização de objetos e suas interações. <br>
+Análogo ao mundo real
+
+### O que é um objeto?
+"Um objeto é descrito por características específicas, comportamentose estado"
+
+**O que tenho?**
+- Modelo
+- Cor
+- Carga
+- Corpo
+- Tampa
+- Ponta
+
+**Sou capaz de fazer?**
+- Escrever
+- Desenhar
+- Rabiscar
+- Pintar
+- Destampar
+
+**Como faço?**
+- Tampada
+- Destampada
+- Em uso
+
+### Pilares de Orientação a Objeto
+- HERANÇA
+- ENCAPSULAMENTO
+- POLIMORFISMO
+- ABSTRAÇÃO
+
+**Classes**
+- Características
+    - Atributos
+    - Métodos
+    
+***Por exemplo:***
+Classe mãe = comportamento e estado gerais
+Classe filho(a) = comportamento e estado específico
+
+### Diferença entre Paradigma Estruturado e Paradigma Orientado à Objeto
+- POO = reuso de código
+- PE = Problemas específicos e diretos

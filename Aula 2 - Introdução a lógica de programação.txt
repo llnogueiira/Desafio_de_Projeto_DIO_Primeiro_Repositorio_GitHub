@@ -1,0 +1,54 @@
+# Aula 2: Introdução a lógica de programação
+
+## 1. O que é lógica?
+
+**Definição formal de lógica:** 
+- "Parte da filosofia que trata das formas do pensamento em geral (dedução, indução, hipótese, inferência etc.) e das operações intelectuais que visam à determinação do que é verdadeiro ou não."
+
+**Definição no mundo computacional:**
+- "Organização e planejamento das instruções, assertivas em um algoritmo, a fim de viabilizar a implantação de um programa."
+
+Percebe que essa definição se aplica no seu cotidiano?
+- Sequência de instruções
+- Processos
+
+Lembre-se: **Seres humanos** *podem prever comportamentos*, **computadores não**.
+
+"Everybody in this country should learn how to program a computer because it teaches you how to think." Steve Jobs
+"Todo mundo em um país deve aprender a como programar um computador, porque isto ensina você como pensar." Steve Jobs
+<br>Este é o motivo pelo qual devemos aprender lógica em programação.
+
+
+## 2. Técnicas de lógica da programação
+
+### Técnica Linear
+- Modelo Tradicional
+- Não tem vínculo
+    - Estrutura hierárquica
+    - Programação de computadore
+- Ordenação de elementos por uma única propriedade.
+- Execução sequênciada 
+- Recursos limitados
+- Única dimensão
+
+Exemplo:
+    1. Acordar 
+    2. Fazer o café
+    3. Tomar o café
+    
+### Técnica Estruturada
+- Organização, disposição e ordem dos elementos essenciais que compõem um corpo (concreto ou abstrato)
+
+***Exemplo:*** <br>
+    1. Acordar <br>
+    2. Fazer o café **ou** fazer o suco <br>
+    3. **Se** fez o café, então tomar o café. **Se** fez o suco, então tomar o suco <br>
+
+### Técnica Modular
+- Partes independentes
+- Controlada por um conjunto de regras
+
+***Exemplo:*** <br>
+    1. Módulo **"acordar"** <br>
+    2. Módulo **"preparar bebida"** <br>
+    3. Módulo **"tomar café da manhã"** <br>

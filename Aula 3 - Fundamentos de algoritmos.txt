@@ -1,0 +1,239 @@
+# Aula 3: Fundamentos de algoritmos
+
+### Objetivo:
+Apresentação dos conceitos básicos para o correto entendimento de algoritmos. Esses conceitos como, variáveis, tipos de 
+dados, instruções, condições, entre outros temas relacionados.
+
+## 1. Tipologias e Variáveis
+Qual a função do computador? Ele deve fornecer informação, através de dados e instruções préviamente definidas.
+Os dados devem ser tratados e processados e podem ser números, caractéres, lógicos etc.
+
+- Exemplo:
+    - Dados numéricos: Inteiros (0,1,5,50,-58..) e Reais(5.95,9.54,-8.8...)
+    - Dados caracteres: KU*&NH53g@# 
+    - Dados lógico: Booleano (Verdadeiro - 1 e Falso - 0)
+
+### Variável
+O que é uma **variável?**
+- Mutável
+- Possui variações
+- Inconstante
+
+Uma **variável** - pode assumir qualquer um dos valores de um determinado conjunto de valores. No entanto, para declarar uma variável, devemos seguir algumas regras:
+
+**Regras:**
+- Atribuição de um ou mais caracteres
+- Primeira letra 
+    - não número
+- Sem espaços em branco
+- Vedado
+    - Utilização de palavras reservadas
+- Caracteres e números
+
+***Exemplos:***
+- x_1
+- nome_usuario
+- Telefone
+- Z4
+- user12
+
+### Papéis de uma variável
+1. Ação
+2. Controle
+
+## 2. Instruções primitivas
+
+**Definição formal:**
+Instruções são linguagem de palavras-chave (vocabulário) de uma determinada de programação que tem por finalidade comandar um computador que irá tratar os dados
+
+Entrada >>> processamento >>> saída
+
+***Exemplo:***
+Início do programa: <br>
+    Nota1 = 8<br>
+    Nota2 = 9<br>
+    Media = (Nota1 + Nota2) / 2<br>
+    Escreva Media<br>
+    Fim programa<br>
+
+Saída: 8,5
+
+## 3. Estruturas condicionais e operadores
+**Condição:** Estado de uma pessoa ou coisa
+**Condicional:** Que expressão uma condição ou suposição / Contem ou implica uma suposição ou hipótese
+
+### Estrutura condicional
+Podemos dividir a **estrutura condicional** em 3 pilares:
+1. Simples
+    - Condição >> operação
+2. Composta
+    - Condição >> operação **ou** exceção
+3. Encadeada
+    - Condição1 >> operação **ou** condição2 >> operação **ou** exceção
+
+### Operadores
+- '=' igual
+- '<>' diferente de
+- '>' maior que
+- '<' menor que
+- '>=' maior ou igual a
+- '<=' menor ou igual a
+
+### Operadores lógicos
+1. AND
+2. OR
+3. NOT
+
+### Operador lógico "AND"
+Condição verdadeira
+- Todas devem ser satisfeitas
+
+Condição1 - Condição2 - Resultado <br>
+F - F - F <br>
+V - F - F <br>
+F - V - F <br>
+V - V - V <br>
+
+Ex: Curso de inglês
+se (gramatica .e .conversacao) então
+escreva "aprovado"
+senão
+escreva "Reprovado"
+
+### Operador lógico "OR"
+Condição verdadeira
+- Apenas uma das condições deve ser verdadeira
+
+Condição1 - Condição2 - Resultado <br>
+F - F - F <br>
+V - F - V <br>
+F - V - V <br>
+V - V - V <br>
+
+Ex:
+se (choveu .ou. grama_molhada) então
+escreva "Plantas regadas"
+senão
+escreva "Regar plantas"
+
+### Operador lógico "NOT"
+- Operador de negação
+- Inversão do resultado lógico
+
+Condição - Resultado <br>
+V - F <br>
+F - V <br>
+
+Ex:
+Not B - > tudo que não está em B
+
+
+## 4. Estruturas de repetição
+As repetições acontecem dentro de um trecho de um programa, loop, laços etc. Mas para que o looping seja interrompido e pare de se repetir, precisamos de condições de parada.
+
+#### Condições de Parada
+- Número de repetições pré-fixadas
+- Condição a ser satisfeita
+
+### Qual a vantagem?
+- Redução de linhas
+- Compreensão facilitada
+- Redução de erros
+
+**Tipos de repetição:** 
+Enquanto ... faça
+
+- Exemplo:
+grama = Falso
+Enquanto (grama == falso) faça
+(instrução de cortar grama)
+(atualiza grama)
+fim enquanto
+
+Para ... de... até... 
+- Exemplo:
+somatorio = 0
+para inicio = 1 até 10
+somatorio = somatorio + inicio
+Escreva somatorio
+fim para
+
+Enquanto (condição)
+Se (condição2)
+(instruções)
+fimse
+...
+fim enquanto
+
+
+## 5. Vetores e matrizes
+### Definição formal vetor
+"Um vetores é caracterizado por uma variavel dimensionada com tamanho pré-fixado."
+
+### Definição formal matriz
+"Matriz é uma tabela organizada em linhas e colunas no formato m x n, onde m representa o número de linhas (horizontal) e n o número de colunas (vertical)"
+
+- Coleção de variáveis
+- Contiguas em memória
+- Índices
+
+Exemplo:
+
+nota11 = 10
+nota21 = 5
+nota12 = 7
+nota22 = 8
+
+Podemos reescrever isto, da seguinte forma:
+
+notas_aluno1 = "[10,5]"
+notas_aluno2 = "[7,8]"
+
+notas_alunos = "[10,5,7,8]"
+
+Agora, se quisermos acessar uma matriz, fazemos por exemplo:
+
+matriz_alunos[6][6]
+escreva "ID aluno"
+escreva matriz_alunos[0][0]
+escreva "Média"
+escreva matriz_alunos[0][6] (acessa linha 0 na 6 coluna)
+
+
+## 6. O que são funções?
+Similar ao conceito de função matemática
+
+#### Definição formal
+As funções, ou sub-rotinas são blocos de instruções que realizam tarefas específicas
+
+Modularização do programa >>> Código mais claro e conciso >>> Reutilização de instruções
+
+As funções recebem dados e imprimem o resultado final, por exemplo:
+
+funcao mediaescolar(nota1,nota2)
+resultado = (nota1 + nota2)/2
+retorne resultado
+fim funcao
+
+aluno1 = mediaescolar(nota11,nota12)
+aluno2 = mediaescolar(nota21,nota22)
+aluno13 = mediaescolar(nota31,nota32)
+
+
+## 6. Instruções de entrada e saída
+1. Quais os tipos de entrada e como inserir os dados?
+2. Como exibir meu resultado?
+
+#### Definição formal
+Consiste na inserção e recebimento de dados do mundo real por meio de ação de alguma interface, seja teclado, mouse, arquivos, entre outros. Os formatos podem variar desde simples arquivos binários até complexas querys de banco de dados.
+
+### Saída
+Existem dois tipos de saídas dentro de um programa (algoritmo):
+1. Saída programada -> Condicional ou incondicional
+2. Saída por interrupção -> Definida pelos periféricos
+
+A saída acontece quando:
+- É bem sucedida
+- Erro de sintaxe ou outro
+- Erros de programação
+- Problemas com a interface

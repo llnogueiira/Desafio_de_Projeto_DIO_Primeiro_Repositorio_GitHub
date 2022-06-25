@@ -1,0 +1,142 @@
+# Aula 5: Introdução ao Git e GitHub
+
+## 1. Introdução ao Git
+Vamos entender o que é Git e sua importância. O Git é um sistema de versionamento de código distribuído.<br>
+**O que é um sistema distribuído?**<br>
+- É um sistema que possui múltiplas cópias de si mesmo em diferentes locais.
+
+### Vantagens de utilizar o Git:
+1. Controle de versão
+2. Armazenamento em nuvem
+3. Trabalho em equipe
+4. Melhoria do código
+5. Reconhecimento
+
+## 2. Navegação via command line interface e instalação
+
+### 2.1. Comandos básicos para um bom desempenho no terminal
+Command line interface x Graphic User Interface
+
+O que vamos aprender com os comandos iniciais?
+- Mudar de pasta
+- Listar as pastas
+- Criar pastas/arquivos
+- Deletar pastar/arquivos
+
+**Windowns**: 
+- cd
+- dir
+- mkdir
+- del / rmdir
+
+**Unix**:
+- cd
+- ls
+- mkdir
+- rm -rf
+
+De forma resumida:
+- cd + nome da pasta = entra na pasta
+- cd .. = volta uma pasta
+- dir = retorna uma lista com todo conteúdo naquele diretório específico
+- mkdir workspace = cria a pasta workspace
+
+***Por exemplo***: 
+Echo hello = imprime a msg “hello” no cmd
+
+Agora, se fizermos:
+echo hello > hello.txt, ele cria um documento txt com a mensagem hello
+
+## 3. Entendendo como o Git funciona por baixo dos panos
+
+### 3.1.	Tópicos fundamentais para entender o funcionamento do Git
+- SHA1
+- Objetos Fundamentais
+- Sistema distribuído
+- Segurança
+ 
+A sigla "SHA" significa **Secure Hash Algorithm** (Algoritmo de Hash Seguro), é um conjunto de funções hash criptográficas projetadas pela NSA (Agencia de Segurança Nacional dos EUA)
+
+A encriptação gera um conjunto de characteres identificador de 40 dígitos, é uma forma curta de representar um arquivo.
+
+A arvore armazena os blobs e guarda o nome do arquivo (podem apontar para outros bobs ou outros shas
+O Blob guarda o sha1 do arquivo
+As arvores possuem um sha1 dos meta dados das arvores
+
+Commits também possuem um sha1, ou seja, se você altera um dado de uma blob (gera-se outro sha1 desta blob), consequentemente altera o sha da arvore, que por sua vez altera do commit
+
+## 4. Primeiros comandos com Git
+
+### 4.1. Iniciando um Git e criando um commit e o ciclo de vida dos arquivos no Git
+
+Quando nos referimos aos repertórios, é importante ressaltar alguns conceitos:
+
+1. Quando criamos um repositório, este arquivo ''nasce'' **Untracked**
+2. Para isso, precisamos adicioná-lo ao **Staged** para o git reconhecê-lo (se tornando um repositório **Tracked**)
+3. Em seguida, fazemos todas as modificações necessárias e depois **commitamos** através do **Commit**, então este arquivo se torna um arquivo **Unmodified**
+4. Caso façamos edições neste arquivo novamente, este passa a ser **Modified**, no entanto precisamos adicioná-lo ao **Staged** novamente para salvar as edições realizadas. *É importante ressaltar que estas edições realizadas, gerarão um novo SHA1 deste repositório)*
+5. Adicionado este arquivo ao **Staged** é necessário commitá-lo novamente através do **Commit**, e assim este arquivo se tornará **Unmodified** mais um vez, e o ciclo irá se repetir.
+
+#### Git init
+- Para iniciar o repositório no git usamos o git init. O comando, além de criar a pasta .git, ela inicializa um conceito do git de repositório, e de fato estamos criando um repositório no git dentro daquela diretório (pasta) <br> 
+
+Assim, podemos dizer que o comando usado para inicializar um repositório GIT dentro de uma pasta em questão é o **git init**
+
+#### Git add
+- Já adicionar o repositório no Staged, usaremos o git add <br>
+
+#### Git add *
+- Para adicionar tudo
+
+#### Git commit
+- E para criar um commit usaremos o commit, quando commitamos algo, este se torna "Unmodified"
+
+#### Git commit
+Commita com mensagem, isto é importante para sabermos o que foi modificado para este commit
+
+## Iniciando um repositório
+**Servidor**: Remote Repository (GitHub) - *Característica principal do servidor: é ser remoto!*<br>
+**Ambiente de desenvolvimento**: Working Directory / Staging Area / Local Repository - *Característica principal do ambiente de desenvolvimento: é ser local!*
+
+*Lembrando: Para enviar os arquivos do repositório local para o repositório remoto, os arquivos devem estar commitados*
+
+# 5. Introdução ao GitHub
+### Trabalhando com o GitHub
+
+Utilizaremos o arquivo em formato Markdown para formatar o texto através de caracteres especiais, como por exemplo #, * etc.
+
+### Como colocar o arquivo do repositório local no repositório remoto?
+**1.** Primeiramente devemos colocar nosso arquivo em um local de origem remota, para isto vamos adicionar a origem remota, assim fazemos:
+- git remote add origin ***copiar o endereço do repositório remoto aqui. Ex: https://github.com/llnogueiira/livro-receitas.git***
+
+**2.** Para mostrar a lista de repositório que temos cadastrados, fazemos:
+- git remote -v
+
+**3.** Para certificar que não existe nenhuma pendência no repositório, fazemos:
+- git status
+
+**4.** Para ''empurrar'' o arquivo do nosso repositório local para o repositório remoto, fazemos:
+- git push origin main/master
+
+### Resolvendo conflitos
+Quando você tenta enviar seu arquivo para o repositório remoto e este é rejeito alertando o seguinte erro:<br>
+"Atualizações foram rejeitadas porque o repositório remoto contém um trabalho que você não tem localmente". Isto significa que alguém atualizou seu repositório remoto e está divergente do seu. <br>
+Para isto temos que integrá-los para então realizar a atualização remota novamente. Então, devemos puxar este arquivo do repositório remotor, para integrar os 2 arquivos e então atualizá-lo.
+
+Para isto, fazemos:
+- git pull origin main/master (isto irá atualizar meu arquivo local). Irá aparecer uma mensagem fornecendo a seguinte informação: "Merge conflict in DOCUMENTO'X'.md"
+
+Agora, verificamos o status para ver se ainda existe alguma coisa pendente, da seguinte forma e seus seguintes passos:
+- git status (irá aparecer a mensagem: **both modified: DOCUMENTO'X'.md** indicando que ambos os arquivos foram modificados (tanto local, quanto remoto)
+- git add * (para adicionar este arquivo para área de **Stage**)
+- git commit -m "Resolve conflito" (todas vez que comitar realizar "-m" para realizar comentários e saber o que foi alterado naquele commit)
+- git push origin main/master ("empurrar esta versão para o GitHub")
+
+### Copiar repositório remoto para máquina local
+#### Git clone
+Caso nós tenhamos a necessidade de realizar uma cópia de um determinado repositório remoto em nossa máquina local (repositório local), podemos executar o seguinte comando:
+- git clone ***copiar o endereço do repositório remoto aqui. Ex: https://github.com/llnogueiira/livro-receitas.git***
+- ls (para verificar se foi clonado o diretório de fato)
+- cd **pasta clonada**
+- ls -a (para mostrar os repositorios ocultos, deve ter a pasta .git identificando um repositório)
+- git remote -v (vai trazer os repositórios remotos que estão apontando para este repositório local)
