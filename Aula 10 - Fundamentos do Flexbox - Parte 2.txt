@@ -1,0 +1,520 @@
+# Fundamentos do flexbox (Parte 2)
+
+## Flex grow
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex grow</title>
+</head>
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 300px;
+            justify-content: center;
+        }
+
+        .item{
+            background-color: orange;
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .flex-grow-0{
+            flex-grow: 0;
+        }
+
+        .flex-grow-1{
+            flex-grow: 1;
+        }
+
+        .flex-grow-2{
+            flex-grow: 2;
+        }
+
+        .flex-grow-3{
+            flex-grow: 3;
+        }
+
+    </style>
+<body>
+    <p>flex-grow-0</p>
+    <div class="flex-container">
+        <div class="item flex-grow-0">A</div>
+        <div class="item flex-grow-0">B</div>
+        <div class="item flex-grow-0">C</div>
+        <div class="item flex-grow-0">D</div>
+    </div>
+
+    <p>flex-grow-1</p>
+    <div class="flex-container">
+        <div class="item flex-grow-1">A</div>
+        <div class="item flex-grow-1">B</div>
+        <div class="item flex-grow-1">C</div>
+        <div class="item flex-grow-1">D</div>
+    </div>
+
+    <p>flex-grow-2</p>
+    <div class="flex-container">
+        <div class="item flex-grow-2">AAA</div>
+        <div class="item flex-grow-2">B</div>
+        <div class="item flex-grow-2">C</div>
+        <div class="item flex-grow-2">D</div>
+    </div>
+
+    <p>flex-grow-3</p>
+    <div class="flex-container">
+        <div class="item flex-grow-3">A</div>
+        <div class="item flex-grow-3">Bbb</div>
+        <div class="item flex-grow-3">C</div>
+        <div class="item flex-grow-3">Dddd</div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+## Flex basis
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex basis</title>
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 500px;
+        }
+
+        .item{
+            background-color: coral;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .basis-auto{
+            flex-basis: auto;
+        }
+
+        .basis-zero{
+            flex-basis: 0;
+        }
+
+        .flex-grow-1{
+            flex-grow: 1;
+        }
+
+        .flex-grow-2{
+            flex-grow: 2;
+        }
+
+        .w100{
+            flex-basis: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <p>auto:</p>
+    <div class="flex-container">
+        <div class="item basis-auto flex-grow-1">A</div>
+        <div class="item basis-auto flex-grow-1">BBB</div>
+        <div class="item basis-auto flex-grow-1">C</div>
+        <div class="item basis-auto flex-grow-2">DEF</div>
+    </div>
+    <p>zero:</p>
+    <div class="flex-container">
+        <div class="item basis-zero flex-grow-1">Aaaaaaaa</div>
+        <div class="item basis-zero flex-grow-1">BBB</div>
+        <div class="item basis-zero flex-grow-1">C</div>
+        <div class="item basis-zero flex-grow-1">DEFgh</div>
+    </div>
+    <p>basis + width:</p>
+    <div class="flex-container">
+        <div class="item w100 flex-grow-1">AAA</div>
+        <div class="item w100 flex-grow-1">BBB</div>
+        <div class="item w100 flex-grow-1">CCC</div>
+        <div class="item w100 flex-grow-1">DEF</div>
+    </div>
+</body>
+</html>
+
+
+
+
+## Flex shrink
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex shrink</title>
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+        }
+
+        .item{
+            background-color: orangered;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .shrink-0-basis-100{
+            flex-shrink: 0;
+            flex-basis: 100px;
+        }
+
+        .shrink-1-basis-100{
+            flex-shrink: 1;
+            flex-basis: 100px;
+        }
+
+        .shrink-1{
+            flex-shrink: 1;
+        }
+
+        .flex-grow-1{
+            flex-grow: 1;
+        }
+
+        .flex-grow-2{
+            flex-grow: 2;
+        }
+
+        .shrink-2{
+            flex-shrink: 2;
+            flex-basis: 100px;
+        }
+
+        .shrink-3-basis-100{
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <p>shrink-1:</p>
+    <div class="flex-container">
+        <div class="item shrink-1 flex-grow-1">A</div>
+        <div class="item shrink-1 flex-grow-1">B</div>
+        <div class="item shrink-1 flex-grow-1">C</div>
+        <div class="item shrink-1 flex-grow-1">D</div>
+        <div class="item shrink-1 flex-grow-1">E</div>
+        <div class="item shrink-1 flex-grow-1">E</div>
+        <div class="item shrink-1 flex-grow-1">E</div>
+        <div class="item shrink-1 flex-grow-1">E</div>
+        <div class="item shrink-1 flex-grow-1">E</div>
+    </div>
+
+    <p>shrink-1:</p>
+    <div class="flex-container">
+        <div class="item shrink-1 flex-grow-1">A</div>
+        <div class="item shrink-1 flex-grow-1">Escrevendo qualquer conteudo aleatório para tomar espaço dentro do meu item. Continuando a escrever.</div>
+        <div class="item shrink-1 flex-grow-1">C</div>
+        <div class="item shrink-1 flex-grow-1">D</div>
+        <div class="item shrink-1 flex-grow-1">Escrevendo qualquer conteudo aleatório para tomar espaço dentro do meu item. Continuando a escrever.</div>
+    </div>
+
+    <p>shrink-0 e basis=100px:</p>
+    <div class="flex-container">
+        <div class="item shrink-0-basis-100 flex-grow-1">A</div>
+        <div class="item shrink-0-basis-100 flex-grow-1">The generated</div>
+        <div class="item shrink-0-basis-100 flex-grow-1">C generated</div>
+        <div class="item shrink-0-basis-100 flex-grow-1">D</div>
+        <div class="item shrink-0-basis-100 flex-grow-1">E</div>
+    </div>
+
+    <p>shrink-1 e basis=100px:</p>
+    <div class="flex-container">
+        <div class="item shrink-1-basis-100 flex-grow-1">A</div>
+        <div class="item shrink-1-basis-100 flex-grow-1">The generated</div>
+        <div class="item shrink-1-basis-100 flex-grow-1">C generated</div>
+        <div class="item shrink-1-basis-100 flex-grow-1">D</div>
+        <div class="item shrink-1-basis-100 flex-grow-1">E</div>
+    </div>
+
+    <p>shrink: mix</p>
+    <div class="flex-container">
+        <div class="item shrink-1-basis-100 flex-grow-1">A</div>
+        <div class="item shrink-2 flex-grow-1">The generated</div>
+        <div class="item shrink-2 flex-grow-1">C generated</div>
+        <div class="item shrink-2 flex-grow-1">D</div>
+        <div class="item shrink-3-basis-100 flex-grow-1">E</div>
+    </div>
+</body>
+</html>
+
+
+
+
+## Flex
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex</title>
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 400px;
+        }
+
+        .item{
+            background-color: brown;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+            }
+        
+        .flex-1{
+            flex: 1; /* grow = 1, shrink = 1, bases = 0 */
+        }
+
+        .flex-2{
+            flex: 2; /* grow = 2, shrink = 1, bases = 0 */
+        }
+
+        .largura{
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <P>flex: 1</P>
+    <div class="flex-container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-1">BBBB</div>
+        <div class="item flex-1">CC</div>
+        <div class="item flex-1">D</div>
+        <div class="item flex-1">EF</div>
+    </div>
+    <p>flex: mix</p>
+    <div class="flex-container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-2">BBBB</div>
+        <div class="item flex-2">CC</div>
+        <div class="item flex-1">D</div>
+        <div class="item flex-1">EF</div>
+    </div>
+    <p>width ignorado - basis: 0</p>
+    <div class="flex-container">
+        <div class="item flex-1 largura">A</div>
+        <div class="item flex-1 largura">BBBB</div>
+        <div class="item flex-1 largura">CC</div>
+        <div class="item flex-1 largura">D</div>
+        <div class="item flex-1 largura">EF</div>
+    </div>
+</body>
+</html>
+
+
+
+
+## Order
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - order</title>
+    <style>
+        .flex-container{
+            display: flex;
+            max-width: 350px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+
+        .item{
+            flex: 1;
+            background-color: brown;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            margin: 5px;
+        }
+
+        .o1{
+            order: 1
+        }
+
+        .o2{
+            order: 2;
+        }
+
+        .o3{
+            order: 3;
+        }
+
+        .o4{
+            order: 4;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>row</h1>
+    <p>order: 0 (zero)</p>
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <p>order: diferentes</p>
+    <div class="flex-container">
+        <div class="item o1">1</div>
+        <div class="item o2">2</div>
+        <div class="item o3">3</div>
+        <div class="item o1">4</div>
+    </div>
+
+    <h1>column</h1>
+    <p>order: 0 (zero)</p>
+    <div class="flex-container column">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <p>order: diferentes</p>
+    <div class="flex-container column">
+        <div class="item o4">1</div>
+        <div class="item o2">2</div>
+        <div class="item o3">3</div>
+        <div class="item o1">4</div>
+    </div>
+</body>
+</html>
+
+
+
+
+## Align self
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align center</title>
+    <style>
+        .flex-container{
+            max-width: 350px;
+            border: 1px solid black;
+            margin-bottom: 5px;
+            display: flex;
+           /*  align-items: center; */
+        }
+
+        .align-container{
+            align-items: center;
+        }
+
+        .item{
+            background-color: aquamarine;
+            color: black;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .center{
+            align-self: center;
+        }
+
+        .start{
+            align-self: flex-start;
+        }
+
+        .end{
+            align-self: flex-end;
+        }
+
+        .baseline{
+            align-self: baseline;
+        }
+
+        .stretch{
+            align-self: stretch;
+        }
+
+        .auto{
+            align-self: auto;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>row</h1>
+    <p>align-self: auto</p>
+    <div class="flex-container align-container">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Criando frases aleatórias para testar a funcionalidade</div>
+        <div class="item auto">Item 4</div>
+    </div>
+    <p>align-self: testando</p>
+    <div class="flex-container">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item stretch">Criando frases aleatórias para testar a funcionalidade</div>
+        <div class="item end">Item 4</div>
+    </div>
+
+    <h1>column</h1>
+    <p>align-self: auto</p>
+    <div class="flex-container column">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Criando frases aleatórias para testar a funcionalidade</div>
+        <div class="item auto">Item 4</div>
+    </div>
+    <p>align-self: testando</p>
+    <div class="flex-container column">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item stretch">Criando frases aleatórias para testar a funcionalidade</div>
+        <div class="item end">Item 4</div>
+    </div>
+</body>
+</html>

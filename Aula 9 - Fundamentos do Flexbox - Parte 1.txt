@@ -1,0 +1,738 @@
+# Fundamentos do flexbox (Parte 1)
+
+## Display flex
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - display flex</title>
+    <style>
+       .flex{
+        max-width: 300px;
+        padding: 10px;
+        border: 1px solid black;
+        display: flex;
+       }
+
+       .item{
+        background-color: aqua;
+        margin: 5px;
+       }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+    </div>
+</body>
+</html>
+
+
+
+
+## Flex direction
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex Direction</title>
+    <style>
+       .flex-container{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+       }
+
+       .flex-item{
+        background: blue;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        margin: 5px;
+       }
+
+       .row{
+        flex-direction: row;
+       }
+
+       .row-reverse{
+        flex-direction: row-reverse;
+       }
+
+       .row-reverse li{
+        background-color: red;
+       }
+
+       .column{
+        float: left;
+        flex-direction: column;
+       }
+
+       .column li{
+        background-color: orange;
+        color: black;
+       }
+
+       .column-reverse{
+        float: right;
+        flex-direction: column-reverse;
+       }
+
+       .column-reverse li{
+        background-color: purple;
+       }
+
+    </style>
+</head>
+<body>
+    <ul class="flex-container row">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+    <ul class="flex-container row-reverse">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+    <ul class="flex-container column">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+    <ul class="flex-container column-reverse">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+</body>
+</html>
+
+
+
+
+## Flex wrap
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex Wrap</title>
+    <style>
+        .flex-container{
+            display: flex;
+            height: 150px; 
+            border: 1px solid black;
+            max-width: 300px;       
+        }
+
+        .item{
+            font-size: 24px;
+            height: 50%;
+            text-align: center;
+            min-width: 100px;
+            line-height: 75px;
+        }
+
+        .nowrap{
+            flex-wrap: nowrap;
+        }
+
+        .wrap{
+            flex-wrap: wrap;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+
+        .green{
+            background-color: lightgreen;
+        }
+
+        .orange{
+            background-color: orange;
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .wrap-reverse{
+            flex-wrap: wrap-reverse;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>no wrap</h1>
+    <div class="flex-container nowrap">
+        <div class="item orange">1</div>
+        <div class="item green">2</div>
+        <div class="item blue">3</div>
+        <div class="item red">4</div>
+    </div>
+    <h1>wrap</h1>
+    <div class="flex-container wrap">
+        <div class="item orange">1</div>
+        <div class="item green">2</div>
+        <div class="item blue">3</div>
+        <div class="item red">4</div>
+    </div>
+    <h1>wrap-reverse</h1>
+    <div class="flex-container wrap-reverse">
+        <div class="item orange">1</div>
+        <div class="item green">2</div>
+        <div class="item blue">3</div>
+        <div class="item red">4</div>
+    </div>
+</body>
+</html>
+
+
+
+
+## Flex flow
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex flow</title>
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 500px;
+            margin-bottom: 10px;
+            max-height: 200px;
+        }
+
+        .default{
+            flex-flow: row nowrap;
+        }
+
+        .wrap{
+            flex-flow: row wrap;
+        }
+
+        .wrap-reverse{
+            flex-flow: row wrap-reverse;
+        }
+
+        .r-nowrap{
+            flex-flow: row-reverse nowrap;
+        }
+
+        .r-wrap{
+            flex-flow: row-reverse wrap;
+        }
+
+        .r-wrap-reverse{
+            flex-flow: column wrap-reverse;
+        }
+
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>default: now nowrap</h1>
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+    <h1>wrap</h1>
+    <div class="flex-container wrap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <h1>wrap-reverse</h1>
+    <div class="flex-container wrap-reverse">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <h1>row-reverse nowrap</h1>
+    <div class="flex-container r-nowrap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+    <h1>row-reverse wrap</h1>
+    <div class="flex-container r-wrap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+    <h1>row-reverse wrap-reverse</h1>
+    <div class="flex-container r-wrap-reverse">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+</body>
+</html>
+
+
+
+
+## Justify content
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - justify-content</title>
+    <style>
+        .flex-container{
+            max-width: 400px;
+            border: 1px solid black;
+            margin: 5px;
+            display: flex;
+        }
+
+        .item{
+            background-color: rgb(45, 12, 207);
+            margin: 5px;
+            text-align: center;
+            color: white;
+        }
+
+        .flex-start{
+            justify-content: flex-start;
+        }
+
+        .flex-end{
+            justify-content: flex-end;
+        }
+
+        .center{
+            justify-content: center;
+        }
+
+        .space-between{
+            justify-content: space-between;
+        }
+
+        .space-around{
+            justify-content: space-around;
+        }
+
+        .column{
+            flex-direction: column;
+            min-height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>row</h1>
+    <p>flex-start:</p>
+    <section class="flex-container flex-start">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+    </section>
+
+    <p>flex-end:</p>
+    <section class="flex-container flex-end">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+    </section>
+
+    <p>center:</p>
+    <section class="flex-container center">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </section>
+
+    <p>space-between:</p>
+    <section class="flex-container space-between">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </section>
+
+    <p>space-around:</p>
+    <section class="flex-container space-around">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </section>
+
+    <h1>column</h1>
+    <p>flex-start (column):</p>
+    <section class="flex-container flex-start column">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </section>
+
+    <p>flex-end (column):</p>
+    <section class="flex-container flex-end column">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </section>
+
+    <p>center (column):</p>
+    <section class="flex-container center column">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </section>
+
+    <p>space-between (column):</p>
+    <section class="flex-container space-between column">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </section>
+
+    <p>space-around (column):</p>
+    <section class="flex-container space-around column">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </section>
+
+</body>
+</html>
+
+
+
+
+## Align items
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align items</title>
+</head>
+<style>
+    .flex-container{
+        max-width: 350px;
+        border: 1px solid black;
+        display: flex;
+    }
+
+    .item{
+        background-color: blueviolet;
+        margin: 5px;
+        color: white;
+        text-align: center;
+        flex: 1;
+    }
+    
+    .center{
+        align-items: center;
+    }
+
+    .stretch{
+        align-items: stretch;
+    }
+
+    .flex-start{
+        align-items: flex-start;
+    }
+
+    .flex-end{
+        align-items: flex-end;
+    }
+
+    .baseline{
+        align-items: baseline;
+    }
+
+    .column{
+        flex-direction: column;
+    }
+
+    .central{
+        height: 400px;
+        justify-content: center;
+    }
+
+    .central .item{
+        flex: 0;
+        padding: 20px;
+    }
+
+</style>
+<body>
+    <h1>row</h1>
+    <p>center</p>
+    <section class="flex-container center">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet</div>
+        <div class="item">Item 3 mais algum texto. Testando mais um pouco</div>
+    </section>
+
+    <p>stretch</p>
+    <section class="flex-container stretch">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet</div>
+        <div class="item">Item 3 mais algum texto. Testando mais um pouco</div>
+    </section>
+
+    <p>flex-start</p>
+    <section class="flex-container flex-start">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet</div>
+        <div class="item">Item 3 mais algum texto. Testando mais um pouco</div>
+    </section>
+
+    <p>flex-end</p>
+    <section class="flex-container flex-end">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet</div>
+        <div class="item">Item 3 mais algum texto. Testando mais um pouco</div>
+    </section>
+    
+    <p>baseline</p>
+    <section class="flex-container baseline">
+        <div class="item"><br>Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet</div>
+        <div class="item">Item 3 mais algum texto. Testando mais um pouco</div>
+    </section>
+
+
+    <h1>column</h1>
+    <p>flex-start</p>
+    <section class="flex-container flex-start column">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet</div>
+        <div class="item">Item 3 mais algum texto. Testando mais um pouco</div>
+    </section>
+
+    <p>flex-end</p>
+    <section class="flex-container flex-end column">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet</div>
+        <div class="item">Item 3 mais algum texto. Testando mais um pouco</div>
+    </section>
+    
+    <p>center</p>
+    <section class="flex-container center column">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet</div>
+        <div class="item">Item 3 mais algum texto. Testando mais um pouco</div>
+    </section>
+
+    <p>baseline</p>
+    <section class="flex-container baseline column">
+        <div class="item"><br>Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet</div>
+        <div class="item">Item 3 mais algum texto. Testando mais um pouco</div>
+    </section>
+
+    <p>alinhamento central a tela</p>
+    <section class="flex-container central center">
+        <div class="item">Item 3 mais algum texto. Testando mais um pouco.</div>
+     </section>
+    
+</body>
+</html>
+
+
+
+
+## Align content
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align content</title>
+</head>
+<style>
+    .flex-container{
+        display: flex;
+        height: 400px;
+        max-width: 300px;
+        flex-wrap: wrap;
+        border: 1px solid black;
+    }
+
+    .item{
+        background-color: rgb(0, 255, 64);
+        padding: 0 5px;
+        margin: 3px;
+        flex: 1;
+        text-align: center;
+        color: black;
+    }
+
+    .stretch{
+        align-content: stretch;
+    }
+
+    .center{
+        align-content: center;
+    }
+
+    .flex-start{
+        align-content: flex-start;
+    }
+
+    .flex-end{
+        align-content: flex-end;
+    }
+
+    .space-around{
+        align-content: space-around;
+    }
+
+    .space-between{
+        align-content: space-between;
+    }
+
+</style>
+<body>
+    <p>stretch:</p>
+    <div class="flex-container stretch">
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes.</div>
+        <div class="item">Escrevendo palavras aleatórias.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes. Escrevendo palavras.</div>
+        <div class="item">Escrevendo palavras.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes. Aleatórias.</div>
+    </div>
+
+    <p>center:</p>
+    <div class="flex-container center">
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes.</div>
+        <div class="item">Escrevendo palavras aleatórias.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes. Escrevendo palavras.</div>
+        <div class="item">Escrevendo palavras.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes. Aleatórias.</div>
+    </div>
+    
+    <p>flex-start:</p>
+    <div class="flex-container flex-start">
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes.</div>
+        <div class="item">Escrevendo palavras aleatórias.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes. Escrevendo palavras.</div>
+        <div class="item">Escrevendo palavras.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes. Aleatórias.</div>
+    </div>
+
+    <p>flex-end:</p>
+    <div class="flex-container flex-end">
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes.</div>
+        <div class="item">Escrevendo palavras aleatórias.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes. Escrevendo palavras.</div>
+        <div class="item">Escrevendo palavras.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes. Aleatórias.</div>
+    </div>
+
+    <p>space-around:</p>
+    <div class="flex-container space-around">
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes.</div>
+        <div class="item">Escrevendo palavras aleatórias.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes. Escrevendo palavras.</div>
+        <div class="item">Escrevendo palavras.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes. Aleatórias.</div>
+    </div>
+
+    <p>space-between:</p>
+    <div class="flex-container space-between">
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes.</div>
+        <div class="item">Escrevendo palavras aleatórias.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes. Escrevendo palavras.</div>
+        <div class="item">Escrevendo palavras.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar.</div>
+        <div class="item">Escrevendo palavras aleatórias para verificar a ação das classes. Aleatórias.</div>
+    </div>
+
+</body>
+</html>

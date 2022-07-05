@@ -53,7 +53,7 @@ Quando estamos criando o layout de um site o navegador representa cada elemento 
 
 As margens (margin) são espaçamentos entre elementos;
 As bordas (border) ;
-O padding é um espaçamento entre as bordas e o conteúdo, a diferença para as margens é que declarações de imagem de fundo funcionam nele;
+O (padding) é um espaçamento entre as bordas e o conteúdo, a diferença para as margens é que declarações de imagem de fundo funcionam nele;
 O conteúdo (content) é o que o seu bloco representa, um texto, uma imagem, um vídeo;
  
 
@@ -220,10 +220,115 @@ Já sabemos que podemos mudar cor e tamanho de algumas fontes, e agora vamos nos
 ### font-family
 Com o font-family podemos alterar a fonte dos nossos textos, como uma fonte da internet ou uma que esteja instalada no nosso computador, mas vamos nos ater às fontes seguras, chamadas de web safe fonts.
 
+- Exemplo: 
+
+#title {
+	font-family: Verdana;
+}
+
+.post_title {
+	font-family: Verdana, Arial; (a 2º aparece aqui caso a primeira dê algum problema. Assim a segunda serve de backup da primeira)
+}
+
 Essas fontes são chamadas assim pois são encontradas em quases todos os sistemas e podem ser usadas sem preocupação.
  
 ### font-size
 O font-size nos ajuda a mudar o tamanho do texto, existem algumas unidades de medida para ele mas por enquanto os pixels são suficientes para nós.
 
+- Exemplo: 
+
+#title {
+	font-size: 30px;
+}
+
 ### font-style
 Usamos o font-style para tornar um texto itálico, na maioria das vezes você usará apenas o valor italic para ele, mas se precisar tirar o itálico de um texto você pode usar o valor normal.
+
+- Exemplo: 
+
+#title {
+	font-style: normal;
+}
+
+### font-weight
+Altera o peso do texto
+
+- Exemplo:
+
+#title {
+font-weight: normal;
+}
+
+.subtitle { 
+	font-weight: bold; (negrito)
+}
+
+### text-transform
+Altera o texto em caixa alta e caixa baixa
+
+.subtitle{
+	text-transform: uppercase; (Todo texto em caixa alta)
+}
+
+.subtitle{
+	text-transform:lowercase; (Todo texto em caixa baixa)
+}
+
+.subtitle{
+	text-transform:capitalize; (Primeira letra de cada palavra em maiucuslo)
+}
+
+
+### text-decoration
+Coloca linhas no texto
+
+.subtitle{
+	text-decoration: underline; (linha abaixo do texto)
+}
+
+.subtitle{
+	text-decoration: overline; (linha acima do texto)
+}
+
+.subtitle{
+	text-decoration: line-through; (linha cortando o texto)
+}
+
+
+
+
+## Estilizando listas
+
+Para estilizar listas ordenadas e não ordenadas utilizamos o "list-style-type"
+
+ul{
+	list-style-type: square;
+}
+
+ol{
+	list-style-type: upper-roman;
+}
+
+ul{
+	list-style-type: "\1F44D";
+}
+
+ul{
+	list-style-image: url("rocket.png");
+}
+
+
+
+
+## Dimensão e alinhamento
+
+Width - Largura
+Height - Altura
+
+Max-width (Largura maxima que um elemento pode ter)
+Max-height (Altura minina que um elemento pode ter)
+
+### Alinhamento:
+
+- Margin (colocar espaçamento entre os elementos)
+- Text align (alinhar textos - podemos alinhar a esquerda (left), a direita (right), ao centro (center), justificar (justify))
