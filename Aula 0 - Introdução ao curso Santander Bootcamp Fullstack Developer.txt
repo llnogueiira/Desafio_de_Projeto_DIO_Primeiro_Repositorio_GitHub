@@ -1,0 +1,30 @@
+# Introdução ao curso Santander Bootcamp Fullstack Developer
+
+O curso será ministrado por experts da área e está segregado em 6 módulos para se tornar mais didático. Estes módulos estão divididos da seguinte forma:
+
+- Módulo 0: Prepare-se para a jornada
+- Módulo 1: Conteúdo de abertura
+- Módulo 2: HTML/CSS3/JS
+- Módulo 3: Angular
+- Módulo 4: JAVA
+- Módulo 5: Spring Framework
+
+Vale ressaltar que a medida que **avançamos nas aulas** e caminhamos para os **próximos módulos** o nível de **dificuldade** também **aumenta**. 
+
+Obs. Este curso é projetado para que pessoas que **não** possuem conhecimento na área, possam também se tornarem desenvolvedoras. Mas é importante saber que necessitamos ser ***PROTAGONISTAS*** nesta jornada para que nosso **desenvolvimento** seja ainda **maior**, por isso precisamos firmar o contrato de compromisso, através da hashtag **#contratodecompromisso**.
+
+Ao final de cada curso dentro do módulo, temos uma avaliação para certificar nosso conhecimento adquirido daquele curso, para isto é necessário acertar acima de 70% das questões para que possamos avançar no curso. Caso tenhamos uma nota **inferior a 70%, perderemos um coração**, sendo assim penalizados. Uma vez aprovado naquele curso, será gerado um **certificado**, comprovando a realização deste com a qualidade esperada.
+
+Ao longo do programa, teremos também **Desafios de Códigos** e **Desafios de Projetos**.
+
+### Desafios de Códigos
+- Tem como objetivo desenvolver o **pensamento computacional e raciocínio lógico** durante a jornada. Essas habilidades são essenciais para o **aumento da capacidade de resolver problemas** 
+
+### Desafios de Projetos
+- Tem como objetivo **promover a criação de um portfólio de projetos consistentes no GitHub**. Essa é uma prática importante na área de TI, a qual pode nos destacar em uma **entrevista técnica**.
+
+### Dicas para realização do programa
+A **conclusão do Bootcamp coloca nosso perfil em destaque** para as empresas parceiras da DIO. Neste contexto as dicas de outro são:
+- Nunca desistir e assumir este compromisso comigo mesmo.
+- Participar ativamente do Fórum, Rooms e Mentorias.
+- Manter meu currículo/perfil atualizado na DIO.
