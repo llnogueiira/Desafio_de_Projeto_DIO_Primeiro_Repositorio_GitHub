@@ -27,4 +27,4 @@ Ao longo do programa, teremos também **Desafios de Códigos** e **Desafios de P
 A **conclusão do Bootcamp coloca nosso perfil em destaque** para as empresas parceiras da DIO. Neste contexto as dicas de outro são:
 - Nunca desistir e assumir este compromisso comigo mesmo.
 - Participar ativamente do Fórum, Rooms e Mentorias.
-- Manter meu currículo/perfil atualizado na DIO.
+- Manter o currículo/perfil atualizado na DIO.
