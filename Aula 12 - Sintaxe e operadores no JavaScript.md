@@ -15,7 +15,7 @@
 Operadores:
 - (=)	Exemplo: x=y -> x=y (Atribui valor)
 - (+=)	Exemplo: x+=y -> x=x+y
-- (*=)	Exemplo: x*=y -> x=x*y
+- (*****=)	Exemplo: x*****=y -> x=x*****y
 - (/=)	Exemplo: x/=y -> x=x/y
 - (%=)	Exemplo: x%=y -> x=x%y
 

@@ -27,7 +27,7 @@ O que vamos aprender com os comandos iniciais?
 - cd
 - dir
 - mkdir
-- del / rmdir
+- del / rmdir / **rm**
 
 **Unix**:
 - cd

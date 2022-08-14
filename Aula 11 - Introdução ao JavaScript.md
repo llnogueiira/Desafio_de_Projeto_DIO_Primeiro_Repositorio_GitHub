@@ -8,6 +8,8 @@
 4. Criar seu primeiro projeto
 5. Conhecer possibilidades no mercado de trabalho
 
+
+
 ## História do JavaScript
 
 - Leve
@@ -17,6 +19,8 @@
 - Comumente utilizada em aplicações web client-side (parte da sua aplicação que vai ter interação com o usuário)
 - Segue o padrão ECMAScript
 
+
+
 ## Evolução
 
 1997 - ECMAScript 1 (First Edition)
@@ -24,6 +28,8 @@
 1999 - ECMAScript 3 (Regular Expressions. try/catch) >> ECMAScript 4 (Never released)
 2009 - ECMAScript 5 ("strict mode". JSON support. String.trim(). Array.isArray(). Array Interation Methods
 2015 - ECMAScript 6
+
+
 
 ## Aplicações
 
@@ -38,6 +44,8 @@
 
 
 # Recursos básicos da linguagem
+
+
 
 ## Manipulando um arquivo
 
@@ -80,8 +88,7 @@ o resultado deve ser: 5
 
 # Console
 
-## Objetivos
-
+**Objetivos**:
 - Aprender a utilizar o console em uma página web
 - Aprender a utilizar o console no terminal
 
